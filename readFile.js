@@ -34,3 +34,17 @@ http.createServer(function(request, response) {
     response.end();
   });
 }).listen(8080);
+
+
+//example with content inside response.end();
+
+var http = require('http');
+
+http.createServer(function(request, response) {
+  response.writeHead(200);
+
+  //note: response.write() is removed
+
+  //content here instead
+  response.end('Hello, this is dog');
+}).listen(8080);
