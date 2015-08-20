@@ -14,6 +14,16 @@ http.createServer(function (request, response) {
   // Response body
   response.write("Hello, I\'m waiting for dog.");
 
+  /*
+  //setTimeout to simulate a longer running process
+  setTimeout(function(){
+     response.write("My dog arrived, waiting is done.");
+
+     // end the response, close the connection
+    response.end();
+  });
+*/
+
   // end the response, close the connection
   response.end();
 
@@ -28,3 +38,5 @@ console.log('listening on port 8080');
 
 //to see the written response, enter: 
 // curl http://localhost:8080
+
+//can also go to localhost:8080 in the browser to get the same result
